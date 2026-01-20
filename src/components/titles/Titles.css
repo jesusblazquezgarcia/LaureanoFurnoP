@@ -1,23 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 .titleVerde {
-  background-color: #008259;
-  display: flex;
-  align-items: center;
-  border-radius: 100px;
+  width: 100% !important;
 }
-
-.circle {
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  margin: 5px 5px 5px 5px;
-  border-radius: 100px;
-}
-
 .titleVerde h2 {
   margin: 0px;
   font-family: oswald;
-  margin-left: 10px;
   color: white;
+  width: 100% !important;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      98deg,
+      rgba(0, 28, 19, 1) 0%,
+      rgba(0, 96, 65, 1) 50%,
+      rgba(0, 28, 19, 1) 100%
+    )
+    1;
 }
