@@ -170,7 +170,6 @@
     height: auto;
     flex: 0 0 auto;
 
-    width: 360px !important;
   }
 }
 @media(max-width:572px){

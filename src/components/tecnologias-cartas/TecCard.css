@@ -7,9 +7,9 @@
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
+  max-height: 100px;
   view-timeline-name: --reveal;
   animation: show 12s both;
-
   animation-timeline: --reveal;
 
   animation-range: entry cover 25%;

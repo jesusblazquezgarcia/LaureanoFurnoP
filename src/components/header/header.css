@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: #191919;
+  background-color: #2B2B2B;
 }
 
 .linksHeader {
@@ -21,7 +21,7 @@ body {
 }
 
 .linksHeader a:hover {
-  color: #101010;
+  color: #00eea3;
 }
 
 .menuContainer {
@@ -46,7 +46,15 @@ body {
   box-shadow: 0em 0em 1em rgba(255, 255, 255);
 
   width: 100%;
-  background-color: #008259;
+  background: #001c13;
+  background: linear-gradient(
+    98deg,
+    rgba(0, 28, 19, 1) 0%,
+    rgba(0, 96, 65, 1) 50%,
+    rgba(0, 28, 19, 1) 74%,
+    rgba(0, 28, 19, 1) 100%
+  );
+
   justify-content: center;
   border-bottom: 1px solid white;
 }
@@ -87,6 +95,8 @@ body {
   }
   #menuBar {
     display: block;
+    fill: white;
+    cursor: pointer;
   }
   .linksHeader-Responsive {
     display: flex;

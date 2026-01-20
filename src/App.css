@@ -2,14 +2,9 @@
   display: flex;
   justify-content: center;
   height: 940px;
-  background-color: #101010;
+  background-color: white;
 }
-.imgBanner {
-  transition: 1s all;
-}
-.imgBanner:hover {
-  transform: scaleX(-1) !important;
-}
+
 #about {
   display: flex;
   align-items: center;
@@ -44,26 +39,40 @@
 .containerText h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: white;
+  color: black;
 }
 
 .containerText h2 span {
   color: #008259;
 }
 
+.cont-imgContainer {
+  background-color: #1b1b1b;
+  height: 100%;
+  position: relative;
+  width: 40%;
+  display: flex;
+  align-items: end;
+  right: -10%;
+}
+.cont-imgContainer img {
+  height: 80%;
+  position: relative;
+  right: 40%;
+}
 .containerText h1 {
   margin-top: 0px;
   font-size: 60px;
   margin-bottom: 10px;
-  color: #57bd9e;
+  color: #008259;
 }
 
 .containerText h1 span {
-  color: white;
+  color: black;
 }
 
 .containerText p {
-  color: white;
+  color: black;
 }
 
 .containerButtons {
@@ -87,12 +96,11 @@
 }
 
 .btnContactarBanner:hover {
-  background-color: white;
-  color: #008259;
+  background-color: rgb(0, 65, 44);
+  color: #ffffff;
 }
 
 .btnCV {
-
   margin-top: 10px;
   border-radius: 100px;
   background-color: transparent;
@@ -113,7 +121,8 @@
   transition: ease-out 0.4s;
 }
 
-.iconRed, .iconContact2 {
+.iconRed,
+.iconContact2 {
   background-color: #008259;
   display: flex;
   align-items: center;
@@ -125,16 +134,16 @@
   border-radius: 100px;
 }
 
-.iconRed:hover, .iconContact2:hover {
+.iconRed:hover,
+.iconContact2:hover {
   width: 48px;
   height: 48px;
   box-shadow: inset white;
-
 }
 
 .btnCV:hover {
   color: white;
-  box-shadow: inset 400px 0 0 0 rgb(0, 130, 89);
+  box-shadow: inset 400px 0 0 0 #008259;
 }
 
 .btn-1 {
@@ -174,36 +183,40 @@ span {
   left: -2px;
   width: calc(100% + 6px);
   height: calc(100% - 10px);
-  background-color: #008259;
+  background-color: #001c13;
   transition: all 0.5s ease-in-out;
   transform: scaleY(1);
 }
 
 .limitarMenorWidth {
   display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 750px;
   gap: 15px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+}
+.cardsEstudios::-webkit-scrollbar,
+.limitarMenorWidth::-webkit-scrollbar {
+  width: 5px;
 }
 
-.limitarMenorWidth::-webkit-scrollbar {
-  width: 0;
-  touch-action: pan-x;
+.cardsEstudios::-webkit-scrollbar-track,
+.limitarMenorWidth::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cardsEstudios::-webkit-scrollbar-thumb,
+.limitarMenorWidth::-webkit-scrollbar-thumb {
+  background: #008259;
 }
 
 .limitarMenorWidth .background-CardEstudio {
-  width: 530px !important;
-  flex: 0 0 auto;
-  cursor: grab;
-  user-select: none;
+  max-width: 100% !important;
 }
 
 .limitarMenorWidth .btnCer_Est {
   margin-top: 20px;
-}
-
-.limitarMenorWidth .background-CardEstudio.active {
-  cursor: grabbing;
 }
 
 .btn-1 a:hover::before {
@@ -223,7 +236,7 @@ span {
   top: -5px;
   width: calc(100% - 10px);
   height: calc(100% + 10px);
-  background-color: #008259;
+  background-color: #001c13;
   transition: all 0.5s ease-in-out;
   transform: scaleX(1);
 }
@@ -269,17 +282,38 @@ span {
 #Tecnologias {
   width: 85%;
 }
-
+.techSup {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
 #Tecnologias .titleVerde {
   margin-bottom: 40px;
   width: 350px;
 }
-
+#Tecnologias h2 {
+  font-family: oswald;
+  color: white;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      98deg,
+      rgba(0, 28, 19, 1) 0%,
+      rgba(0, 96, 65, 1) 50%,
+      rgba(0, 28, 19, 1) 100%
+    )
+    1;
+}
+.contFront,
+.contBack {
+  width: 100%;
+}
 .superior-Sobremi {
   margin-bottom: 50px;
   gap: 20px;
 }
-
+.techInf {
+  width: auto !important;
+}
 .containerTecnologias {
   display: grid;
   padding: 30px 50px;
@@ -288,7 +322,9 @@ span {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px 50px;
 }
-
+.techSup .containerTecnologias {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 .tituloEstudios {
   color: #ffffff;
   font-family: "Oswald", sans-serif;
@@ -296,15 +332,35 @@ span {
 
 #Estudios {
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 55px 0px;
-  flex-direction: column;
-  background-color: #008259;
 }
-
+.Certs,
+.estudios {
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  width: 50%;
+}
+.Certs .background-CardEstudio {
+  background-color: #2f2f2f !important;
+}
+.cardsEstudios {
+  display: flex;
+  flex-direction: column;
+  max-height: 750px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  gap: 10px !important;
+}
+.estudios {
+  background-color: white !important;
+}
+.estudios h2 {
+  color: black !important;
+}
 .ContainerEstudio {
-  width: 85%;
+  background-color: #1b1b1b;
 }
 
 .contenedorBotones {
@@ -383,7 +439,6 @@ span {
   display: flex;
 }
 .contButtonsFixed div {
-
   display: flex;
 }
 .clickDespliegue {
@@ -415,7 +470,14 @@ span {
   background-color: #008259 !important;
 }
 #proyectos {
-  background-color: #008259;
+  background: #001c13;
+  background: linear-gradient(
+    98deg,
+    rgba(0, 28, 19, 1) 7%,
+    rgba(0, 161, 110, 1) 41%,
+    rgba(0, 161, 110, 1) 67%,
+    rgba(0, 28, 19, 1) 93%
+  );
   display: flex;
   padding: 50px 0px;
   justify-content: center;
@@ -491,18 +553,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.iconContact2, .clickDespliegue{
-    border: 1px solid white
+.iconContact2,
+.clickDespliegue {
+  border: 1px solid white;
 }
 .colorMenuScroll {
   background-color: #004932 !important;
 }
-.formulario input::placeholder{
-    padding-left: 7px !important;
+.formulario input::placeholder {
+  padding-left: 7px !important;
 }
 .colorMenuScroll .btn-1 a::before,
 .colorMenuScroll .btn-1 a::after {
-  background-color: #004932 !important;
+  background-color: #001c13 !important;
 }
 .CentrarFooter p {
   text-align: end;
@@ -520,15 +583,27 @@ footer {
     display: none;
   }
 }
-@media (max-width: 1210px) {
-  .imgBanner {
-    display: none;
-  }
-}
 
 @media (max-width: 1024px) {
   .limitarMenorWidth {
     overflow-x: scroll;
+  }
+  .imgSobremi {
+    display: none;
+  }
+  .cont-imgContainer {
+    display: flex;
+    width: 60%;
+    height: 100%;
+  }
+  .Certs,
+  .estudios {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 85%;
+  }
+  #Estudios {
+    flex-direction: column-reverse;
   }
   .centrarContactar img {
     display: none;
@@ -552,6 +627,29 @@ footer {
     width: 100%;
   }
 }
+
+@media (max-width: 950px) {
+  .imgBanner {
+    display: none;
+  }
+  .techSup {
+    flex-direction: column;
+  }
+  .techSup .containerTecnologias {
+    width: auto !important;
+  }
+  .imgProyectoContainer {
+    height: 200px !important;
+  }
+  .containerProyectos {
+    max-width: 100%;
+  }
+  .containerProyectos .btns-Proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 @media (max-width: 829px) {
   .cartExp .background-CardEstudio {
     width: 85% !important;
@@ -565,7 +663,10 @@ footer {
   .btnContactarBanner {
     padding: 15px 30px;
   }
-
+  .Uni .background-CardEstudio {
+    justify-content: start;
+    height: 100%;
+  }
   .btnCV {
     margin: 10px 0px 20px 0px;
   }
@@ -577,9 +678,15 @@ footer {
   .containerText h1 {
     font-size: 55px;
   }
-
-  .limitarMenorWidth .background-CardEstudio {
-    width: 280px !important;
+  .cardsEstudios,
+  .limitarMenorWidth {
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    max-height: fit-content;
+  }
+  .cardsEstudios .background-CardEstudio {
+    min-width: 300px;
   }
   .Circulo,
   .flechaCartaExp,
@@ -612,19 +719,28 @@ footer {
   .containerTecnologias {
     padding: 5px 5px;
   }
+
+  .cont-imgContainer {
+    display: none;
+  }
+  .Certs,
+  .estudios {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 .containerText {
   display: table;
 }
 .containerText h1 {
   position: relative;
-  background: #101010;
+  background: white;
 }
 .containerText .escribir {
   position: absolute;
   right: 0;
   width: 0;
-  background: #101010;
+  background: white;
   border-left: 1px solid #008259;
   animation: escribir 5s steps(30) infinite alternate;
 }
@@ -633,6 +749,6 @@ footer {
     width: 100%;
   }
   to {
-    width: 32%;
+    width: 0%;
   }
 }

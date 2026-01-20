@@ -25,11 +25,18 @@ import imagenPostgreSQL from './assets/images/Postgresql_elephant.svg'
 import imagenCSS from './assets/images/CSS.svg'
 import yoimagen from './assets/images/yoimagen.webp'
 import doc from './assets/CV-Laureano-Furno.docx'
-
+import keycloak from "./assets/images/keycloak.png"
+import Go from "./assets/images/Go-Logo_Blue.png"
+import antd from "./assets/images/Antd.png"
 import experienicaLaboralIcono from './assets/images/experienicaLaboralIcono.svg'
 
+import docker from './assets/images/docker.png'
+import github from './assets/images/Github.png'
+import postman from './assets/images/postman.png'
+import drawio from './assets/images/drawio.png'
+import clickup from './assets/images/Clickup.png'
 import './App.css'
-import ImagenBanner from './assets/images/banner.webp'
+import ImagenBanner from './assets/images/banner.png'
 
 import instagram from './assets/images/instagram.svg'
 import linkedin from './assets/images/linkedin.svg'
@@ -115,7 +122,9 @@ function App() {
               </div>
             </div>
           </div>
-          <img className='imgBanner' data-aos="fade-up" data-aos-anchor-placement="center-bottom"  src={ImagenBanner} alt="imagenBanner" />
+          <div className='cont-imgContainer'>
+            <img className='imgBanner' data-aos="fade-up" data-aos-anchor-placement="center-bottom"  src={ImagenBanner} alt="imagenBanner" />
+          </div>
         </div>
       </section>
       <section id='about'>
@@ -140,18 +149,38 @@ function App() {
           </div>
         </div>
         <div id='Tecnologias'>
-          <Titles title={"TECNOLOGIAS QUE USO"} />
-          <div className='containerTecnologias'>
-            <TecCard nameTecs={"Bootstrap"} img={imagenBootstrap} />
-            <TecCard nameTecs={"Express"} img={imagenExpress} />
-            <TecCard nameTecs={"MySQL"} img={imagenMysql} />
-            <TecCard nameTecs={"JavaScript"} img={imagenJS} />
-            <TecCard nameTecs={"Node.js"} img={imagenNode} />
+          <div className='techSup'>
+            <div className='contFront'>
+              <h2>FrontEnd</h2>
+              <div className='containerTecnologias'>
+                <TecCard nameTecs={"Bootstrap"} img={imagenBootstrap} />
+                <TecCard nameTecs={"React"} img={imagenReact} />
+                <TecCard nameTecs={"HTML"} img={imagenHTML} />
+                <TecCard nameTecs={"CSS"} img={imagenCSS} />
+                <TecCard nameTecs={"JavaScript"} img={imagenJS} />
+                <TecCard nameTecs={"Antd"} img={antd} />
+              </div>
+            </div>
+            <div className='contBack'>
+              <h2>Backend</h2>
+              <div className='containerTecnologias'>
+                <TecCard nameTecs={"Express"} img={imagenExpress} />
+                <TecCard nameTecs={"PostgreSQL"} img={imagenPostgreSQL} />
+                <TecCard nameTecs={"MySQL"} img={imagenMysql} />
+                <TecCard nameTecs={"Node.js"} img={imagenNode} />
+                <TecCard nameTecs={"Keycloak"} img={keycloak} />
+                <TecCard nameTecs={"Go"} img={Go} />
+              </div>
+            </div>
+          </div>
+          <h2>Herramientas</h2>
+          <div className='containerTecnologias techInf'>
             <TecCard nameTecs={"Figma"} img={imagenFigma} />
-            <TecCard nameTecs={"HTML"} img={imagenHTML} />
-            <TecCard nameTecs={"React"} img={imagenReact} />
-            <TecCard nameTecs={"PostgreSQL"} img={imagenPostgreSQL} />
-            <TecCard nameTecs={"CSS"} img={imagenCSS} />
+            <TecCard nameTecs={"Github"} img={github} />
+            <TecCard nameTecs={"Postman"} img={postman} />
+            <TecCard nameTecs={"ClickUp"} img={clickup} />
+            <TecCard nameTecs={"Draw.io"} img={drawio} />
+            <TecCard nameTecs={"Docker"} img={docker} />
           </div>
         </div>
       </section>
@@ -172,16 +201,24 @@ function App() {
         </div>
       </div>
       <section id='Estudios'>
-        <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" className='ContainerEstudio'>
-          <h2 className='tituloEstudios'>ESTUDIOS</h2>
-          <Card  nameTitulo={"TECNICO EN COMPUTACION"} fecha={"2019-2024"} desc={"Asistí a un secundario técnico, donde en cuarto año comencé la orientación en computación. Allí pasé por temas como Arduino con C++, Python, Java, diagramaciones, APIs REST con Node.js, HTML, CSS, PHP, MySQL, JavaScript, y fue una experiencia espectacular. Me enamoré del hecho de programar y de resolver problemas. En sexto año, comenzamos materias como Desarrollo de Sistemas, donde desarrollamos una app web para gestionar torneos de eSports, y también en Prácticas Profesionalizantes, donde creamos una visual novel, entre otros proyectos que requerían documentar endpoints, realizar diagramas entidad-relación, diagramas de flujo, aplicar metodologías como Scrum, entre otros conocimientos que considero muy valiosos, sobre todo por haber tenido docentes realmente comprometidos."} tecnologias={["HTML", "CSS", "FIGMA", "JavaScript", "Node", "Express", "MySQL", "Bootstrap"]} />
-        </div>
-        <div className='ContainerEstudio'>
+        <div className='ContainerEstudio Certs'>
           <h2 className='tituloEstudios'>CERTIFICACIONES</h2>
           <div className='limitarMenorWidth'>
-            <Card nameTitulo={"DESARROLLO WEB 1 - INTRODUCTORIO"} fecha={"2022-2022"} desc={"Cursé Desarrollo Web I en el programa Aprendé programando, este fue un curso introductivo dictado desde abril a junio donde aprendi lo fundamental de Figma, HTML y CSS, aprendiendo cosas sobre etiquetas y estilos CSS."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/1jN-npUspOquHLNEQqtPJPHBM0n_DRJbM/view"} />
-            <Card nameTitulo={"DESARROLLO WEB 1 - AVANZADO"} fecha={"2022-2022"} desc={"Cursé Desarrollo Web I Avanzado en el programa Aprendé Programando, este fue un curso avanzado dictado desde agosto a diciembre donde profundicé en HTML y CSS, aprendiendo técnicas de maquetado más complejas, diseño responsivo y buenas prácticas para el desarrollo de sitios web modernos."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/1PVemj_0ikmZiQStiAIk68Pc6fVSGQQ7b/view"} />
-            <Card nameTitulo={"DESARROLLO WEB I"} fecha={"2022-2022"} desc={"Al finalizar el curso avanzado, me dieron el último certificado luego de mostrar un proyecto de página web responsive con HTML, CSS y diseñada en Figma."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/13jnz4Ozou7EzePIMrLGnvzZ2VvKSN42K/view"} />
+            <Card nameTitulo={"DESARROLLO WEB 1 - INTRODUCTORIO"} institucion={"Aprende Programando"} fecha={"2022-2022"} desc={"Cursé Desarrollo Web I en el programa Aprendé programando, este fue un curso introductivo dictado desde abril a junio donde aprendi lo fundamental de Figma, HTML y CSS, aprendiendo cosas sobre etiquetas y estilos CSS."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/1jN-npUspOquHLNEQqtPJPHBM0n_DRJbM/view"} />
+            <Card nameTitulo={"DESARROLLO WEB 1 - AVANZADO"} institucion={"Aprende Programando"}  fecha={"2022-2022"} desc={"Cursé Desarrollo Web I Avanzado en el programa Aprendé Programando, este fue un curso avanzado dictado desde agosto a diciembre donde profundicé en HTML y CSS, aprendiendo técnicas de maquetado más complejas, diseño responsivo y buenas prácticas para el desarrollo de sitios web modernos."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/1PVemj_0ikmZiQStiAIk68Pc6fVSGQQ7b/view"} />
+            <Card nameTitulo={"DESARROLLO WEB I"} institucion={"Aprende Programando"}  fecha={"2022-2022"} desc={"Al finalizar el curso avanzado, me dieron el último certificado luego de mostrar un proyecto de página web responsive con HTML, CSS y diseñada en Figma."} tecnologias={["HTML", "CSS", "FIGMA"]} verCert={true} btnLink={"https://drive.google.com/file/d/13jnz4Ozou7EzePIMrLGnvzZ2VvKSN42K/view"} />
+          </div>
+        </div>
+        {//data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+          //
+        }
+        <div className='ContainerEstudio estudios'>
+          <h2 className='tituloEstudios'>ESTUDIOS</h2>
+          <div className='cardsEstudios'>
+            <Card  nameTitulo={"TECNICO EN COMPUTACION"} institucion={"ET 32 DE 14: Gral José de San Martín"} fecha={"2019-2024"} desc={"Asistí a un secundario técnico, donde en cuarto año comencé la orientación en computación. Allí pasé por temas como Arduino con C++, Python, Java, diagramaciones, APIs REST con Node.js, HTML, CSS, PHP, MySQL, JavaScript, y fue una experiencia espectacular. Me enamoré del hecho de programar y de resolver problemas. En sexto año, comenzamos materias como Desarrollo de Sistemas, donde desarrollamos una app web para gestionar torneos de eSports, y también en Prácticas Profesionalizantes, donde creamos una visual novel, entre otros proyectos que requerían documentar endpoints, realizar diagramas entidad-relación, diagramas de flujo, aplicar metodologías como Scrum, entre otros conocimientos que considero muy valiosos, sobre todo por haber tenido docentes realmente comprometidos."} tecnologias={["HTML", "CSS", "FIGMA", "JavaScript", "Node", "Express", "MySQL", "Bootstrap"]} />
+            <div className="Uni">
+              <Card nameTitulo={"Licenciatura en Tecnologia Informatica"} institucion={"UEAN: Universidad Escuela Argentina de Negocios "} fecha={"2026-Actualidad"} desc={"Comienzo mis estudios universitarios el 1 de marzo. Si bien el contenido detallado de cada materia se desarrollará durante la cursada, ya cuento con el plan académico y continúo formándome de manera práctica y autodidacta en desarrollo de software."} tecnologias={[]} />
+            </div>
           </div>
         </div>
       </section>

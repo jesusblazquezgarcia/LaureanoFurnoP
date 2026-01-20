@@ -2,12 +2,13 @@ import './Card.css'
 import CardTecEstudios from '../cardTec-Estudios/cardTec-Estudios'
 
 
-const Card = ({ nameTitulo, desc, tecnologias, verCert, fecha, btnLink }) => {
+const Card = ({ nameTitulo, desc, tecnologias, verCert, fecha, btnLink, institucion }) => {
 
     return (
         <>
-            <div data-aos="fade-left" className='background-CardEstudio'>
+            <div className='background-CardEstudio'>
                 <h3 className='nameTitulo'>{nameTitulo}</h3>
+                <p className='InstS'>{institucion}</p>
                 <p className='fechaInicio-terminado'>{fecha}</p>
                 <p className='descripcionEstudio'>{desc}</p>
                 <div className='Tecnologias-Estudio'>
